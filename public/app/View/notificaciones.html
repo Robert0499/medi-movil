@@ -1,0 +1,89 @@
+<div class="d-block d-md-none">
+
+	<nav class="navbar navbar navbar-dark bg-dark">
+		<i class="fa fa-comments fa-2x navbar-brand ico" ng-click="chat()"></i>
+		<i class="fa fa-calendar fa-2x navbar-brand" ng-click="reservar()"></i>
+		<i class="fa fa-check-circle fa-2x navbar-brand" ng-click="recientes()"></i>
+		<i class="fa fa-bell fa-2x navbar-brand" ng-click="notifi()"></i>
+		<i class="fa fa-user fa-2x navbar-brand" ng-click="perfil()"></i>
+		<i class="fa fa-power-off fa-2x navbar-brand text-danger" ng-click="cerrar()"></i>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 p-0 d-flex justify-content-center">
+				<div class="card mt-2">
+					<div class="card-body text-center">
+						<div class="form-row">
+							<div class="from-group col-12">
+								<h5>Nombre medico: </h5>
+							</div>
+							<div class="from-group col-12">
+								<label for="">Monica Usquiano</label>
+							</div>
+							<div class="from-group col-12">
+								<h5>Hora: </h5>
+							</div>
+							<div class="from-group col-12">
+								<label for="">2 PM</label>
+							</div>
+							<div class="from-group col-12">
+								<h5>Fecha: </h5>
+							</div>
+							<div class="from-group col-12">
+								<label for="">29/09/2018</label>
+							</div>
+							<div class="from-group col-12">
+								<h5>Estado: </h5>
+							</div>
+							<div class="from-group col-12">
+								<label for="">Pendiente</label>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer d-flex justify-content-end">
+						<button class="btn btn-primary" type="button" ng-click="open()">Calificar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" tabindex="-1" role="dialog" id="calificar">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Calificar</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-row">
+							<div class="form-group col-sm-12">
+								<label>Selecciona una calificación</label>
+								<select name="" id="" class="form-control" required>
+								<option value="" hidden selected>Seleccione</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+
+							</select>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+							<button type="submit" class="btn btn-primary">Aceptar</button>
+
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="text-center d-none d-md-block">Lo sentimos, este sistema está solo disponible para dispositivos moviles (Pantalla chica).
+</div>

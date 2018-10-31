@@ -1,0 +1,55 @@
+<div class="d-block d-md-none">
+
+	<nav class="navbar  navbar">
+		<a class="navbar-brand text-white">
+			<h4>MediMóvil</h4>
+		</a>
+		<div class="btn-group dropleft">
+			<button class="navbar-toggler d-block d-sm-none  dropdown-toggle" data-toggle="dropdown" type="button">
+				<span>&#9776;</span>
+			</button>
+			<div class="dropdown-menu">
+				<button class="dropdown-item" type="button" ng-click="perfil()">
+					<i class="fa fa-user">
+						<span>Perfil</span>
+					</i>
+				</button>
+				<button class="dropdown-item" type="button" ng-click="medico()">
+					<i class="fa fa-bar-chart">
+						<span>Citas</span>
+					</i>
+				</button>
+				<button class="dropdown-item" type="button" ng-click="cerrar()">
+					<i class="fa fa-power-off">
+						<span> Cerrar Sesión</span>
+					</i>
+				</button>
+			</div>
+		</div>
+		<form action="" class="form-inline my-2-lg-0 d-none d-sm-block">
+			<a class="navbar-brand text-white" ng-click="reportes()">
+				<h4>Reportes</h4>
+			</a>
+			<i class="fa fa-user fa-2x text-white mr-2" ng-click="perfil()"></i>
+			<i class="fa fa-power-off fa-2x text-danger ml-1" ng-click="cerrar()"></i>
+		</form>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 mt-5">
+				<div class="card">
+					<div class="card-body">
+						<div class="d-flex justify-content-center">
+							<h5>$ Ingresos por Citas
+								<span class="badge badge-info">{{inasistencias}}</span>
+							</h5>
+						</div>
+						<canvas id="myChart" width="400" height="300"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- error en pc -->
+	<div class="text-center d-none d-md-block">Lo sentimos, este sistema está solo disponible para dispositivos moviles (Pantalla chica).
+	</div>

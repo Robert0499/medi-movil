@@ -1,0 +1,42 @@
+body {
+  overflow: hidden;
+}
+
+i {
+  cursor: pointer;
+}
+.center {
+  height: calc(100vh - 57px);
+  border-radius: 0%;
+  width: 100% !important;
+}
+.ca-body {
+  overflow-y: scroll;
+}
+#medics {
+  color: #007bff;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  background-color: transparent;
+}
+#medics:hover {
+  color: #0056b3;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.medicos {
+  color: #007bff;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  background-color: transparent;
+}
+.medicos:hover {
+  color: #0056b3;
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,8 @@
+i {
+  cursor: pointer;
+}
+.center {
+  height: calc(100vh - 57px);
+  border-radius: 0%;
+  width: 100% !important;
+}

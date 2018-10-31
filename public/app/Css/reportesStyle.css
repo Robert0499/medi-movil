@@ -1,0 +1,9 @@
+nav {
+  background: rgb(0, 65, 97);
+}
+.navbar-toggler {
+  color: white;
+}
+.img-resp {
+  max-height: 20vh;
+}

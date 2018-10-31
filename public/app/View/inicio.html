@@ -1,0 +1,31 @@
+<div class="container-fluid row d-flex justify-content-center m-0 d-block d-md-none">
+	<div class="up"></div>
+	<div class="down"></div>
+	<div class="col-sm-6 col-md-6">
+		<div class="card ingreso">
+			<h3 class="card-header">Login</h3>
+			<div class="card-body">
+				<form ng-submit="login()">
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<label for="">Usuario</label>
+							<input type="text" class="form-control" placeholder="Usuario" required ng-model="user.usuario">
+						</div>
+						<div class="form-group col-md-12">
+							<label for="">Contraseña</label>
+							<input type="password" class="form-control" required placeholder="Contraseña" ng-model="user.contrasena">
+						</div>
+					</div>
+					<button class="btn btn-1 col-sm-12 btn-block text-white">Iniciar sesión</button>
+					<button class="btn btn-2 col-sm-12 btn-block text-white" type="button" ng-click="registro()">Registrarse</button>
+
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+<!-- error en pc -->
+<div class="text-center d-none d-md-block text-white">Lo sentimos, este sistema está solo disponible para dispositivos moviles (Pantalla chica).
+</div>

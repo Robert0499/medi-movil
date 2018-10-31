@@ -1,0 +1,139 @@
+<!-- solo movil -->
+<div class="card d-block d-md-none">
+	<div class="card-header text-center text-white">
+		<div class="d-flex row align-items-center">
+			<i class="fa fa-chevron-left fa-2x" ng-click="return()"></i>
+			<h3 class="offset-3">Registrarse</h3>
+		</div>
+		<h5 id="medico">Médico</h5>
+		<h5 id="paciente">Paciente</h5>
+	</div>
+	<!-- radios check -->
+	<div class="d-flex justify-content-center blue text-white">
+		<div class="form-check pr-4">
+			<input class="form-check-input" type="radio" name="radios" id="exampleRadios1" value="option1" ng-model="radiopaciente"
+			 ng-click="paciente()">
+			<label class="form-check-label" for="exampleRadios1">
+				Paciente
+			</label>
+		</div>
+		<div class="form-check">
+			<input class="form-check-input" type="radio" name="radios" id="exampleRadios2" value="option2" ng-click="medico()">
+			<label class="form-check-label" for="exampleRadios2">
+				Médico
+			</label>
+		</div>
+	</div>
+	<!-- registro medico -->
+	<div class="card-body blue text-white" id="rmedico">
+		<form ng-submit="registroMedico()" id="form1">
+			<div class="form-row">
+				<div class="form-group col-12">
+					<label for="nombrem">Nombre completo</label>
+					<input id="nombrem" type="text" class="form-control" ng-model="nombre" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="tdm">Tipo Documento</label>
+					<select id="tdm" class="form-control" ng-model="tipo_id" required>
+						<option value="" hidden selected>Tipo Documento</option>
+						<option ng-repeat="array in tpd" value="{{array.id}}">{{array.nombre}}</option>
+					</select>
+				</div>
+				<div class="form-group col-12">
+					<label for="nim">N° Identificación</label>
+					<input id="nim" type="text" class="form-control" ng-model="numero_documento" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="correom">Correo</label>
+					<input id="correom" type="email" class="form-control" ng-model="correo" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="tlm">Teléfono</label>
+					<input id="tlm" type="number" class="form-control" ng-model="telefono" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="descm">Descripción</label>
+					<textarea id="descm" type="text" class="form-control" maxrow="3" ng-model="descripcion" required></textarea>
+				</div>
+				<div class="form-group col-12">
+					<label for="valorm">Valor Por Consulta</label>
+					<input id="valorm" type="number" class="form-control" ng-model="precio" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="usum">Usuario</label>
+					<input id="usum" type="text" class="form-control" ng-model="usuario" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="passm">Contraseña</label>
+					<input id="passm" type="password" class="form-control" ng-model="contrasena" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="cpassm">Confirmar contraseña</label>
+					<input id="cpassm" type="password" class="form-control" ng-model="ccontrasena" required>
+					<p class="text-danger" id="mensaje2">las contraseñas no coinciden</p>
+				</div>
+				<div class="form-group col-12">
+					<input type="file" class="d-flex d-inline-block mt-1" style="opacity: 0;" ngf-select ng-model="foto" name="fileme"
+					 ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100" ngf-resize="{width: 100, height: 100}"
+					 style="border-style: none" ng-hide="true" required>
+					<i class="fa fa-camera-retro fa-2x ml-2 mt-3" id="iconF"></i>
+				</div>
+			</div>
+			<butto type="submit" class="btn btn-primary">Registrarse</butto>
+		</form>
+	</div>
+	<!-- registro paciente -->
+	<div class="card-body blue text-white" id="rpaciente">
+		<form ng-submit="registroPaciente()" id="form2">
+			<div class="form-row">
+				<div class="form-group col-12">
+					<label for="nombre">Nombre completo</label>
+					<input id="nombre" type="text" class="form-control" ng-model="nombre" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="td">Tipo Documento</label>
+					<select id="td" class="form-control" ng-model="tipo_id" required>
+						<option value="" hidden selected>Tipo Documento</option>
+						<option ng-repeat="array in tpd" value="{{array.id}}">{{array.nombre}}</option>
+					</select>
+				</div>
+				<div class="form-group col-12">
+					<label for="ni">N° Identificación</label>
+					<input id="ni" type="text" class="form-control" ng-model="numero_documento" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="correo">Correo</label>
+					<input id="correo" type="email" class="form-control" ng-model="correo" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="tl">Teléfono</label>
+					<input id="tl" type="number" class="form-control" ng-model="telefono" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="usu">Usuario</label>
+					<input id="usu" type="text" class="form-control" ng-model="usuario" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="pass">Contraseña</label>
+					<input id="pass" type="password" class="form-control" ng-model="contrasena" required>
+				</div>
+				<div class="form-group col-12">
+					<label for="cpass">Confirmar contraseña</label>
+					<input id="cpass" type="password" class="form-control" ng-model="ccontrasena" required>
+					<p class="text-danger" id="mensaje">las contraseñas no coinciden</p>
+				</div>
+				<div class="form-group col-12">
+					<input type="file" class="d-flex d-inline-block" style="opacity: 0;" ngf-select ng-model="foto" name="file"
+					 ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100" ngf-resize="{width: 100, height: 100}"
+					 style="border-style: none" ng-hide="true" required>
+					<i class="fa fa-camera-retro fa-2x ml-2 mt-3" id="icon2"></i>
+				</div>
+			</div>
+			<butto type="submit" class="btn btn-primary">Registrarse</butto>
+		</form>
+	</div>
+</div>
+<!-- error en pc -->
+<div class="text-center d-none d-md-block">Lo sentimos, este sistema está solo disponible para dispositivos moviles
+	(Pantalla chica).
+</div>
